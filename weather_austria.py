@@ -20,7 +20,6 @@ if response.status_code == 200:
     data_param = data.get("data", {})
     unit = data.get("unit", {})
     station = properties.get("station", {})
-    #location = properties.get("name",{})
     if parameter == "TL":
         print("The current temperature at station", station, "in Austria is", data_param[0],unit)
     elif parameter == "P":
@@ -30,6 +29,6 @@ if response.status_code == 200:
     elif parameter == "DD":
         print("The current wind direction at station", station, "in Austria is", data_param[0],unit)
 else:
-    print("API not accessible")
+    print("API is not accessible")
 
 
